@@ -1,7 +1,11 @@
 .tab-bar .tab .close-icon {
-	display: none !important;
+	pointer-events: none;
 }
 
-.tab-bar .tab:hover .title {
-	-webkit-mask-position: 0 0 !important;
+.tab-bar .tab .close-icon::before {
+	content: ""
+}
+
+.tab-bar .tab.modified:hover .close-icon::before {
+	content: "\f052";
 }
